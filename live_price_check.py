@@ -48,4 +48,4 @@ while True:
     except Exception as e:
         print(f"Request failed: {e}")
     
-    time.sleep(360)  # Wait for 5mins
+    time.sleep(240)  # Wait for 5mins
