@@ -35,8 +35,12 @@ while response == 'y':
         prev_time, prev_price_5m, prev_price_diff = get_price(1)
         time_cst_5m, cur_price_5m, price_diff = get_price()
 
-        print(f'Current Interval: {time_cst_5m}, current price: {cur_price_5m}, diff: {price_diff}')
-        print(f'previous Interval: {prev_time}, previous price: {prev_price_5m}, previous diff: {prev_price_diff}')
+        print(f'Current Interval: {time_cst_5m}')
+        print(f'\tcurrent price: {cur_price_5m}')
+        print(f'\tprevious price: {prev_price_5m}')
+        print(f'\tdiff: {price_diff:.4f}')
+        print(f'\tprevious price: {prev_price_5m}, previous diff: {prev_price_diff:.4f}')
+
         cur_price_5m = float(cur_price_5m)
         if(cur_price_5m < 3):
             channel.play(d_ding,0)
