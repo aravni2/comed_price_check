@@ -29,8 +29,8 @@ channel = pygame.mixer.Channel(0)
 s_ding = pygame.mixer.Sound('airplane_ding.wav')
 d_ding = pygame.mixer.Sound('airplane_ding_ding.wav')
 exit = pygame.mixer.Sound('exit.wav')
-
-while True:
+response = 'y'
+while response == 'y':
     try:
         prev_time, prev_price_5m, prev_price_diff = get_price(1)
         time_cst_5m, cur_price_5m, price_diff = get_price()
@@ -48,4 +48,4 @@ while True:
     except Exception as e:
         print(f"Request failed: {e}")
     
-    time.sleep(120)  # Wait for 5mins
+    response = input('type "y" to continue')  # Wait for 5mins
